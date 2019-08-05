@@ -1,1 +1,22 @@
 
+
+#Directs the box to go left
+0 **x* -> W 0
+
+#Box hits the West Wall. Stop. Changes to state 1
+0 **W* -> X 1
+
+#Heads east
+1 *x** -> E 1
+
+#Hits East Wall, bounces north one unit, back to state 0, west
+1 xE** -> N 0
+
+#Once box hits northeast corner, heads south until the bottom
+1 NE** -> S 2
+
+#Heads south until bottom
+2 ***x -> S 2
+
+#Once South Wall is hit, return to state 0, sweeping until completion
+2 ***S -> X 0
