@@ -1,1 +1,46 @@
 
+# GOING NORTH (HAND EAST)
+# Checks if north is empty and right hand touches wall
+0 xE** -> N 0
+
+# If there's no wall takes a step east and "turns" clockwise
+0 *x** -> E 1
+
+# "Turns" Counterclockwise if it is blocked to its front and right
+0 NE** -> x 3
+
+
+
+# GOING EAST (HAND SOUTH)
+# Checks if east is empty and right hand touches wall
+1 *x*S -> E 1
+
+# If there's no wall takes a step south and "turns" clockwise
+1 ***x -> S 2
+
+# "Turns" Counterclockwise if it is blocked to its front and right
+1 *E*S -> x 0
+
+
+
+# GOING SOUTH (HAND WEST)
+# Checks if south is empty and right hand touches wall
+2 **Wx -> S 2
+
+# If there's no wall takes a step west and "turns" clockwise
+2 **x* -> W 3
+
+# "Turns" Counterclockwise if it is blocked to its front and right
+2 **WS -> x 1
+
+
+
+# GOING WEST (HAND NORTH)
+# Checks if west is empty and right hand touches wall
+3 N*x* -> W 3
+
+# If there's no wall takes a step north and "turns" clockwise
+3 x*** -> N 0
+
+# "Turns" Counterclockwise if it is blocked to its front and right
+3 N*W* -> x 2 
