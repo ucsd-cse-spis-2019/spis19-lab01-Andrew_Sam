@@ -1,3 +1,8 @@
+#State 0: Picobot goes to the bottom.
+#State 1: Picobot Runs Left.
+#State 2: Picobot Runs right.
+
+
 #Sends picoboi to the bottom
 0 ***x -> S 0
 
